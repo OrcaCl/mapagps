@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Matanzas Coast Trail",
+        "color": "royalblue"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-71.839, -33.953],
+          [-71.838, -33.954],
+          [-71.836, -33.956],
+          [-71.835, -33.958]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pupuya Short Loop",
+        "color": "orange"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-71.833, -33.955],
+          [-71.831, -33.954],
+          [-71.830, -33.956],
+          [-71.832, -33.957],
+          [-71.833, -33.955]
+        ]
+      }
+    }
+  ]
+}

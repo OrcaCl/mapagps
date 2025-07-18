@@ -63,3 +63,4 @@ map.on('click', e => {
   console.log('Click en:', e.latlng);
 });
 
+
