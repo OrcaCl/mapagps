@@ -1,36 +1,72 @@
-// Inicializa el mapa
-const map = L.map('map').setView([-33.95, -71.85], 13);
+// Inicializar mapa
+const map = L.map('map').setView([-33.970193918341806, -71.86508083380814], 14);
 
-// Capa base con OpenStreetMap
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+
+
+
+// Capa base
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Cargar rutas desde GeoJSON
-fetch('data/rutas.geojson')
-  .then(response => response.json())
-  .then(data => {
-    L.geoJSON(data, {
-      style: feature => ({
-        color: feature.properties.color || 'green',
-        weight: 4,
-        opacity: 0.8
-      }),
-      onEachFeature: (feature, layer) => {
-        if(feature.properties && feature.properties.name) {
-          // Popup corregido: interpolación correcta
-          layer.bindPopup(`<strong>${feature.properties.name}</strong>`);
-        }
-      }
-    }).addTo(map);
-  })
-  .catch(error => console.error('Error cargando rutas:', error));
+// Estilo para rutas
+const estiloRutas = {
+  color: '#007bff',
+  weight: 4,
+  opacity: 0.8
+};
 
-// .then(data => {
-//   const geojsonLayer = L.geoJSON(data, { /*...*/ }).addTo(map);
-//   map.fitBounds(geojsonLayer.getBounds());
-// })
+// Icono para POI
+const iconoPOI = L.icon({
+  iconUrl: './assets/icons/bike.svg',
+  iconSize: [32, 32],
+  iconAnchor: [16, 32],
+  popupAnchor: [0, -32]
+});
 
+// Capa rutas
+const rutasLayer = L.geoJSON(null, {
+  style: estiloRutas,
+  onEachFeature: (feature, layer) => {
+    const { name, description } = feature.properties;
+    layer.bindPopup(`<strong>${name}</strong><br>Dificultad: ${description}`);
+  }
+}).addTo(map);
+
+// Capa POIs
+const poisLayer = L.geoJSON(null, {
+  pointToLayer: (feature, latlng) => {
+    return L.marker(latlng, { icon: iconoPOI });
+  },
+  onEachFeature: (feature, layer) => {
+    const { name, description } = feature.properties;
+    layer.bindPopup(`<strong>${name}</strong><br>${description}`);
+  }
+}).addTo(map);
+
+// Cargar datos GeoJSON
+fetch('../data/rutas.geojson')
+  .then(res => res.json())
+  .then(data => rutasLayer.addData(data));
+
+fetch('../data/pois.geojson')
+  .then(res => res.json())
+  .then(data => poisLayer.addData(data));
+
+// Control de capas
+const overlays = {
+  "Rutas": rutasLayer,
+  "Puntos de Interés": poisLayer
+};
+L.control.layers(null, overlays).addTo(map);
+
+//Centrar en dibujos.
+map.fitBounds(geojsonLayer.getBounds());
+
+
+/**
+ * HERRAMIENTAS DE MAPAS - VISORES DE COORDENADAS ****** NO BORRAR AÜN
+ */
 
 // Crear un div para mostrar las coordenadas del mouse
 const coordsDiv = L.control({position: 'bottomleft'});

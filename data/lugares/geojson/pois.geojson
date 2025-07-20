@@ -1,0 +1,17 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mirador",
+        "tipo": "vista",
+        "description": "Punto panorámico"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.85536933234813, -33.944290161770745]
+      }
+    }
+  ]
+}

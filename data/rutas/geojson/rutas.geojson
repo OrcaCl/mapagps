@@ -5,6 +5,7 @@
       "type": "Feature",
       "properties": {
         "name": "Matanzas Coast Trail",
+        "description": "Inventada 1",
         "color": "royalblue"
       },
       "geometry": {
@@ -21,6 +22,7 @@
       "type": "Feature",
       "properties": {
         "name": "Pupuya Short Loop",
+        "description": "Inventada 2",
         "color": "orange"
       },
       "geometry": {

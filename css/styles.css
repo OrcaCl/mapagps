@@ -4,6 +4,21 @@ html, body {
   overflow: hidden;
 }
 
+.mouse-coords {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgb(20, 114, 119);
+  padding: 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+
+#map {
+  height: 98.5vh;
+  width: 100%;
+   overflow: hidden;
+}
+
 .leaflet-control.mouse-coords {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
