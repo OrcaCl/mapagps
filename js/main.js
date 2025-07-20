@@ -2,9 +2,9 @@
 const map = L.map('map').setView([-33.970193918341806, -71.86508083380814], 14);
 
 // Capa base
-// L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//   attribution: '&copy; OpenStreetMap contributors'
-// }).addTo(map);
+ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+   attribution: '&copy; OpenStreetMap contributors'
+ }).addTo(map);
 
 //Capa Satelital
 // L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{x}/{y}', {
@@ -12,16 +12,16 @@ const map = L.map('map').setView([-33.970193918341806, -71.86508083380814], 14);
 //   maxZoom: 19
 // }).addTo(map);
 
-const baseMaps = {
-  "Mapa Clásico": L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map),
-  "Satélite": L.tileLayer('https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{x}/{y}', {
-    attribution: 'Tiles © Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
-     maxZoom: 19
-    }).addTo(map),
-};
+// const baseMaps = {
+//   "Mapa Clásico": L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//     maxZoom: 19,
+//     attribution: '&copy; OpenStreetMap contributors'
+//     }).addTo(map),
+//   "Satélite": L.tileLayer('https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{x}/{y}', {
+//     attribution: 'Tiles © Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+//      maxZoom: 19
+//     }).addTo(map),
+// };
 
 // Estilo para rutas
 const estiloRutas = {
@@ -115,7 +115,7 @@ cargarRutasGeoJSON();
 
 /** PUNTOS DE INTERÉS ---  V2 --- */
 
-fetch('../data/lugares/geojson/pois.geojson')
+fetch('./data/lugares/geojson/pois.geojson')
   .then(res => res.json())
   .then(data => poisLayer.addData(data));
 
