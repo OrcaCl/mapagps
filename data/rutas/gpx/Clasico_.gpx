@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" creator="StravaGPX" version="1.1" xmlns="http://www.topografix.com/GPX/1/1">
+ <trk>
+  <name>Clásico </name>
+  <type>cycling</type>
+  <trkseg>
+   <trkpt lat="-34.0102810" lon="-71.8234270">
+    <ele>196.4</ele>
+   </trkpt>
+   <trkpt lat="-34.0102400" lon="-71.8233950">
+    <ele>195.7</ele>
+   </trkpt>
+   <trkpt lat="-34.0101350" lon="-71.8233580">
+    <ele>196.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0101020" lon="-71.8233070">
+    <ele>196.5</ele>
+   </trkpt>
+   <trkpt lat="-34.0100190" lon="-71.8232310">
+    <ele>196.7</ele>
+   </trkpt>
+   <trkpt lat="-34.0099380" lon="-71.8231530">
+    <ele>197.0</ele>
+   </trkpt>
+   <trkpt lat="-34.0099300" lon="-71.8230600">
+    <ele>195.0</ele>
+   </trkpt>
+   <trkpt lat="-34.0098860" lon="-71.8229880">
+    <ele>193.7</ele>
+   </trkpt>
+   <trkpt lat="-34.0098340" lon="-71.8229320">
+    <ele>193.3</ele>
+   </trkpt>
+   <trkpt lat="-34.0097690" lon="-71.8229060">
+    <ele>193.7</ele>
+   </trkpt>
+   <trkpt lat="-34.0097030" lon="-71.8228770">
+    <ele>193.3</ele>
+   </trkpt>
+   <trkpt lat="-34.0096280" lon="-71.8228400">
+    <ele>193.2</ele>
+   </trkpt>
+   <trkpt lat="-34.0095840" lon="-71.8228120">
+    <ele>192.9</ele>
+   </trkpt>
+   <trkpt lat="-34.0095200" lon="-71.8228070">
+    <ele>193.1</ele>
+   </trkpt>
+   <trkpt lat="-34.0094740" lon="-71.8227860">
+    <ele>193.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0094260" lon="-71.8227430">
+    <ele>192.7</ele>
+   </trkpt>
+   <trkpt lat="-34.0093760" lon="-71.8226670">
+    <ele>191.5</ele>
+   </trkpt>
+   <trkpt lat="-34.0093300" lon="-71.8225830">
+    <ele>190.3</ele>
+   </trkpt>
+   <trkpt lat="-34.0092880" lon="-71.8224980">
+    <ele>189.4</ele>
+   </trkpt>
+   <trkpt lat="-34.0091830" lon="-71.8224370">
+    <ele>190.3</ele>
+   </trkpt>
+   <trkpt lat="-34.0091170" lon="-71.8223620">
+    <ele>189.3</ele>
+   </trkpt>
+   <trkpt lat="-34.0090420" lon="-71.8222800">
+    <ele>188.2</ele>
+   </trkpt>
+   <trkpt lat="-34.0088820" lon="-71.8221380">
+    <ele>185.8</ele>
+   </trkpt>
+   <trkpt lat="-34.0087970" lon="-71.8220530">
+    <ele>183.3</ele>
+   </trkpt>
+   <trkpt lat="-34.0087380" lon="-71.8220050">
+    <ele>181.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0086800" lon="-71.8219630">
+    <ele>179.3</ele>
+   </trkpt>
+   <trkpt lat="-34.0086200" lon="-71.8219240">
+    <ele>177.2</ele>
+   </trkpt>
+   <trkpt lat="-34.0085660" lon="-71.8218820">
+    <ele>175.8</ele>
+   </trkpt>
+   <trkpt lat="-34.0085150" lon="-71.8218380">
+    <ele>174.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0085100" lon="-71.8217670">
+    <ele>172.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0084740" lon="-71.8217070">
+    <ele>171.5</ele>
+   </trkpt>
+  </trkseg>
+ </trk>
+</gpx>

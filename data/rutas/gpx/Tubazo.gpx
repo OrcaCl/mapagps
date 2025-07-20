@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" creator="StravaGPX" version="1.1" xmlns="http://www.topografix.com/GPX/1/1">
+ <trk>
+  <name>Tubazo</name>
+  <type>cycling</type>
+  <trkseg>
+   <trkpt lat="-34.0099940" lon="-71.8232080">
+    <ele>197.4</ele>
+   </trkpt>
+   <trkpt lat="-34.0099200" lon="-71.8231610">
+    <ele>197.0</ele>
+   </trkpt>
+   <trkpt lat="-34.0098500" lon="-71.8231690">
+    <ele>199.2</ele>
+   </trkpt>
+   <trkpt lat="-34.0098200" lon="-71.8231010">
+    <ele>197.7</ele>
+   </trkpt>
+   <trkpt lat="-34.0097740" lon="-71.8230290">
+    <ele>196.1</ele>
+   </trkpt>
+   <trkpt lat="-34.0097180" lon="-71.8229910">
+    <ele>195.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0096790" lon="-71.8229380">
+    <ele>194.8</ele>
+   </trkpt>
+   <trkpt lat="-34.0096480" lon="-71.8228720">
+    <ele>194.2</ele>
+   </trkpt>
+   <trkpt lat="-34.0095700" lon="-71.8228060">
+    <ele>192.9</ele>
+   </trkpt>
+   <trkpt lat="-34.0095260" lon="-71.8227870">
+    <ele>193.1</ele>
+   </trkpt>
+   <trkpt lat="-34.0094540" lon="-71.8227420">
+    <ele>192.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0093910" lon="-71.8227310">
+    <ele>192.0</ele>
+   </trkpt>
+   <trkpt lat="-34.0093280" lon="-71.8227200">
+    <ele>192.5</ele>
+   </trkpt>
+   <trkpt lat="-34.0092660" lon="-71.8226860">
+    <ele>192.3</ele>
+   </trkpt>
+   <trkpt lat="-34.0092320" lon="-71.8225830">
+    <ele>191.5</ele>
+   </trkpt>
+   <trkpt lat="-34.0091770" lon="-71.8225160">
+    <ele>190.8</ele>
+   </trkpt>
+   <trkpt lat="-34.0091260" lon="-71.8224600">
+    <ele>190.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0090640" lon="-71.8224330">
+    <ele>190.1</ele>
+   </trkpt>
+   <trkpt lat="-34.0089900" lon="-71.8223140">
+    <ele>188.7</ele>
+   </trkpt>
+   <trkpt lat="-34.0088980" lon="-71.8222190">
+    <ele>187.2</ele>
+   </trkpt>
+   <trkpt lat="-34.0088460" lon="-71.8221800">
+    <ele>186.5</ele>
+   </trkpt>
+   <trkpt lat="-34.0088090" lon="-71.8221510">
+    <ele>185.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0087620" lon="-71.8220840">
+    <ele>182.9</ele>
+   </trkpt>
+   <trkpt lat="-34.0087080" lon="-71.8220080">
+    <ele>181.1</ele>
+   </trkpt>
+   <trkpt lat="-34.0086470" lon="-71.8219400">
+    <ele>177.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0085750" lon="-71.8218760">
+    <ele>175.8</ele>
+   </trkpt>
+   <trkpt lat="-34.0085020" lon="-71.8218210">
+    <ele>173.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0084350" lon="-71.8217770">
+    <ele>172.5</ele>
+   </trkpt>
+   <trkpt lat="-34.0083500" lon="-71.8217420">
+    <ele>171.1</ele>
+   </trkpt>
+   <trkpt lat="-34.0082880" lon="-71.8217370">
+    <ele>170.5</ele>
+   </trkpt>
+   <trkpt lat="-34.0082520" lon="-71.8217050">
+    <ele>170.1</ele>
+   </trkpt>
+   <trkpt lat="-34.0082270" lon="-71.8216740">
+    <ele>168.2</ele>
+   </trkpt>
+   <trkpt lat="-34.0081890" lon="-71.8216460">
+    <ele>166.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0081250" lon="-71.8216440">
+    <ele>166.0</ele>
+   </trkpt>
+   <trkpt lat="-34.0081000" lon="-71.8216100">
+    <ele>165.0</ele>
+   </trkpt>
+   <trkpt lat="-34.0080740" lon="-71.8215970">
+    <ele>164.5</ele>
+   </trkpt>
+   <trkpt lat="-34.0080260" lon="-71.8215690">
+    <ele>162.9</ele>
+   </trkpt>
+   <trkpt lat="-34.0079270" lon="-71.8215150">
+    <ele>160.9</ele>
+   </trkpt>
+   <trkpt lat="-34.0078730" lon="-71.8214670">
+    <ele>159.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0078210" lon="-71.8214090">
+    <ele>158.4</ele>
+   </trkpt>
+   <trkpt lat="-34.0077670" lon="-71.8213420">
+    <ele>155.7</ele>
+   </trkpt>
+   <trkpt lat="-34.0077280" lon="-71.8212540">
+    <ele>152.0</ele>
+   </trkpt>
+   <trkpt lat="-34.0076130" lon="-71.8211510">
+    <ele>148.1</ele>
+   </trkpt>
+   <trkpt lat="-34.0075090" lon="-71.8210470">
+    <ele>142.8</ele>
+   </trkpt>
+  </trkseg>
+ </trk>
+</gpx>

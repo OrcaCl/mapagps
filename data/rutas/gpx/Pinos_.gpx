@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" creator="StravaGPX" version="1.1" xmlns="http://www.topografix.com/GPX/1/1">
+ <trk>
+  <name>Pinos </name>
+  <type>cycling</type>
+  <trkseg>
+   <trkpt lat="-34.0118390" lon="-71.8238600">
+    <ele>195.7</ele>
+   </trkpt>
+   <trkpt lat="-34.0118990" lon="-71.8238120">
+    <ele>195.2</ele>
+   </trkpt>
+   <trkpt lat="-34.0119370" lon="-71.8238030">
+    <ele>194.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0119660" lon="-71.8237970">
+    <ele>194.4</ele>
+   </trkpt>
+   <trkpt lat="-34.0120220" lon="-71.8238650">
+    <ele>194.9</ele>
+   </trkpt>
+   <trkpt lat="-34.0119850" lon="-71.8239190">
+    <ele>195.7</ele>
+   </trkpt>
+   <trkpt lat="-34.0122320" lon="-71.8238180">
+    <ele>193.1</ele>
+   </trkpt>
+   <trkpt lat="-34.0123200" lon="-71.8237760">
+    <ele>192.2</ele>
+   </trkpt>
+   <trkpt lat="-34.0122370" lon="-71.8236060">
+    <ele>190.1</ele>
+   </trkpt>
+   <trkpt lat="-34.0120830" lon="-71.8234240">
+    <ele>189.0</ele>
+   </trkpt>
+   <trkpt lat="-34.0121370" lon="-71.8233020">
+    <ele>187.0</ele>
+   </trkpt>
+   <trkpt lat="-34.0122640" lon="-71.8232420">
+    <ele>184.7</ele>
+   </trkpt>
+   <trkpt lat="-34.0122490" lon="-71.8232130">
+    <ele>185.0</ele>
+   </trkpt>
+   <trkpt lat="-34.0121340" lon="-71.8230920">
+    <ele>183.5</ele>
+   </trkpt>
+   <trkpt lat="-34.0121500" lon="-71.8230520">
+    <ele>182.8</ele>
+   </trkpt>
+   <trkpt lat="-34.0121920" lon="-71.8229790">
+    <ele>179.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0121420" lon="-71.8229440">
+    <ele>178.4</ele>
+   </trkpt>
+   <trkpt lat="-34.0121540" lon="-71.8228200">
+    <ele>175.1</ele>
+   </trkpt>
+   <trkpt lat="-34.0122510" lon="-71.8228920">
+    <ele>176.4</ele>
+   </trkpt>
+   <trkpt lat="-34.0123220" lon="-71.8230910">
+    <ele>181.7</ele>
+   </trkpt>
+   <trkpt lat="-34.0124030" lon="-71.8230950">
+    <ele>180.3</ele>
+   </trkpt>
+   <trkpt lat="-34.0124800" lon="-71.8230920">
+    <ele>179.2</ele>
+   </trkpt>
+   <trkpt lat="-34.0124720" lon="-71.8228370">
+    <ele>170.8</ele>
+   </trkpt>
+   <trkpt lat="-34.0123450" lon="-71.8227160">
+    <ele>168.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0124470" lon="-71.8225810">
+    <ele>160.5</ele>
+   </trkpt>
+   <trkpt lat="-34.0123650" lon="-71.8224650">
+    <ele>155.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0122550" lon="-71.8224340">
+    <ele>157.6</ele>
+   </trkpt>
+   <trkpt lat="-34.0121910" lon="-71.8224520">
+    <ele>157.9</ele>
+   </trkpt>
+   <trkpt lat="-34.0121610" lon="-71.8224560">
+    <ele>157.9</ele>
+   </trkpt>
+   <trkpt lat="-34.0121040" lon="-71.8224550">
+    <ele>157.4</ele>
+   </trkpt>
+   <trkpt lat="-34.0120480" lon="-71.8224530">
+    <ele>157.2</ele>
+   </trkpt>
+   <trkpt lat="-34.0119870" lon="-71.8224060">
+    <ele>154.2</ele>
+   </trkpt>
+   <trkpt lat="-34.0118040" lon="-71.8223870">
+    <ele>149.1</ele>
+   </trkpt>
+   <trkpt lat="-34.0118000" lon="-71.8223300">
+    <ele>147.5</ele>
+   </trkpt>
+   <trkpt lat="-34.0119880" lon="-71.8223680">
+    <ele>152.3</ele>
+   </trkpt>
+   <trkpt lat="-34.0119590" lon="-71.8222600">
+    <ele>146.8</ele>
+   </trkpt>
+   <trkpt lat="-34.0119190" lon="-71.8222140">
+    <ele>145.0</ele>
+   </trkpt>
+   <trkpt lat="-34.0120230" lon="-71.8221460">
+    <ele>144.1</ele>
+   </trkpt>
+   <trkpt lat="-34.0120860" lon="-71.8220930">
+    <ele>142.5</ele>
+   </trkpt>
+  </trkseg>
+ </trk>
+</gpx>
