@@ -66,7 +66,7 @@ const poisLayer = L.geoJSON(null, {
 const colores = ['#e6194B', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6'];
 
 async function cargarRutasGeoJSON() {
-  const indexPath = '/data/rutas/geojson/index.json';
+  const indexPath = './data/rutas/geojson/index.json';
   const rutasGroup = L.featureGroup();
 
   try {
@@ -75,7 +75,7 @@ async function cargarRutasGeoJSON() {
 
     let i = 0;
     for (const archivo of archivos) {
-      const ruta = `data/rutas/geojson/${archivo}`;
+      const ruta = `./data/rutas/geojson/${archivo}`;
       try {
         const res = await fetch(ruta);
         const geojson = await res.json();
