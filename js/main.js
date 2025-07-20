@@ -15,7 +15,7 @@ const estiloRutas = {
 
 // Icono para POI
 const iconoPOI = L.icon({
-  iconUrl: './assets/icons/bike.svg',
+  iconUrl: '/assets/icons/bike.svg',
   iconSize: [32, 32],
   iconAnchor: [16, 32],
   popupAnchor: [0, -32]
@@ -34,6 +34,7 @@ const rutasLayer = L.geoJSON(null, {
   }
 }).addTo(map);
 
+
 // Capa POIs
 const poisLayer = L.geoJSON(null, {
   pointToLayer: (feature, latlng) => {
@@ -45,51 +46,53 @@ const poisLayer = L.geoJSON(null, {
   }
 }).addTo(map);
 
-
-
-
-// Cargar datos GeoJSON
-// fetch('../data/rutas.geojson')
-//   .then(res => res.json())
-//   .then(data => rutasLayer.addData(data));
+const colores = ['#e6194B', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6'];
 
 async function cargarRutasGeoJSON() {
-  const indexPath = 'data/rutas/geojson/index.json';
+  const indexPath = '/data/rutas/geojson/index.json';
+  const rutasGroup = L.featureGroup();
 
   try {
     const res = await fetch(indexPath);
     const archivos = await res.json();
 
-    archivos.forEach(async (archivo) => {
+    let i = 0;
+    for (const archivo of archivos) {
       const ruta = `data/rutas/geojson/${archivo}`;
-
       try {
         const res = await fetch(ruta);
         const geojson = await res.json();
 
         L.geoJSON(geojson, {
+          style: {
+            color: colores[i % colores.length],
+            weight: 4,
+            opacity: 0.9,
+          },
           onEachFeature: (feature, layer) => {
             if (feature.properties?.name) {
-              layer.bindPopup(feature.properties.name);
+              layer.bindPopup(`<strong>${feature.properties.name}</strong>`);
             }
-          },
-          style: {
-            color: '#0074D9',
-            weight: 3,
           }
-        }).addTo(map);
+        }).addTo(rutasGroup);
+
+        i++;
       } catch (err) {
         console.error(`Error cargando ${ruta}`, err);
       }
-    });
+    }
+
+    rutasGroup.addTo(map);
+
+    if (rutasGroup.getLayers().length > 0) {
+      map.fitBounds(rutasGroup.getBounds());
+    }
   } catch (err) {
     console.error('No se pudo cargar el index.json', err);
   }
 }
 
 cargarRutasGeoJSON();
-
-
 
 
 
@@ -114,7 +117,7 @@ L.control.layers(null, overlays).addTo(map);
 
 
 //Centrar en dibujos.
-map.fitBounds(geojsonLayer.getBounds());
+//map.fitBounds(geojsonLayer.getBounds());
 
 
 /**

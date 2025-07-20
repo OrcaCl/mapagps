@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "convert": "DEBUG=convert-gpx node scripts/convert-gpx-to-geojson.js"
+    "convert": "DEBUG=convert-gpx node scripts/convert-gpx-to-geojson.js",
+    "index-rutas": "DEBUG=create-index-rutas node scripts/create-index-rutas.js"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +16,8 @@
     "@tmcw/togeojson": "^7.1.2",
     "debug": "^4.4.1",
     "dotenv": "^17.2.0",
-    "jsdom": "^26.1.0"
+    "jsdom": "^26.1.0",
+    "open-location-code": "^1.0.3"
   },
   "devDependencies": {
     "jest": "^30.0.4"
