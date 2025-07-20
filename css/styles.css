@@ -4,14 +4,13 @@ html, body {
   overflow: hidden;
 }
 
-.mouse-coords {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: rgb(20, 114, 119);
+.mouse-coords.leaflet-control {
+  background-color: rgba(202, 32, 32, 0.6) !important;
+  color: rgb(255, 255, 255);
   padding: 6px;
   border-radius: 4px;
   font-family: monospace;
 }
-
 
 #map {
   height: 98.5vh;
@@ -19,10 +18,14 @@ html, body {
    overflow: hidden;
 }
 
-.leaflet-control.mouse-coords {
+.leaflet-control {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 6px;
   border-radius: 4px;
   font-family: monospace;
+}
+
+.leaflet-container .leaflet-control-attribution{
+    background-color: rgba(0, 0, 0, 0.6);
 }
