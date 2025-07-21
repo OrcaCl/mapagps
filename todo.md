@@ -78,18 +78,6 @@ Esta tarea permitirá que las ubicaciones definidas con Plus Codes desde Wix se 
 ---
 
 
-
-### Avances del Proyecto ###
-
-# 19/07/2025
-
-## ✅ Completado
-- Spike inicial para `gpx-to-geojson`
-- Conversión básica de GPX a GeoJSON con `@tmcw/togeojson`
-- Uso de `JSDOM` (¡mantener!) para parseo del GPX
-- Script `npm run convert` funcional para importar varios `.gpx`
-+ Salida directa de los archivos `.geojson` en `data/rutas/geojson`
-- Creación automática de carpetas de salida
-- Uso de `debug` para logging selectivo (`debug:convert`)
-- Estructura base para mostrar los GeoJSON en el mapa
+# No olvidar "
+- hacer git tag v0.x.x -m "Mensaje" cuando haga cambios radicales
 

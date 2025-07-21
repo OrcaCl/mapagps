@@ -18,8 +18,5 @@
     "dotenv": "^17.2.0",
     "jsdom": "^26.1.0",
     "open-location-code": "^1.0.3"
-  },
-  "devDependencies": {
-    "jest": "^30.0.4"
   }
 }
