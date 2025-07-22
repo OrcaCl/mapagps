@@ -1,27 +1,27 @@
+import L from 'leaflet'
+import 'leaflet/dist/leaflet.css'
+import './css/styles.css';
+
 // Inicializar mapa
 const map = L.map('map').setView([-33.970193918341806, -71.86508083380814], 14);
 
-// Capa base
- L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+// Capa base de mapa
+ const mapaClasico = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
    attribution: '&copy; OpenStreetMap contributors'
  }).addTo(map);
 
-//Capa Satelital
-// L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{x}/{y}', {
-//   attribution: 'Tiles © Esri',
-//   maxZoom: 19
-// }).addTo(map);
+//Capa Satelital - Por si me consigo una API de google maps, acá debería agregarla
+const mapaSatelital =  
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{x}/{y}', {
+    attribution: 'Tiles © Esri',
+    maxZoom: 19
+  }).addTo(map);
 
-// const baseMaps = {
-//   "Mapa Clásico": L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//     maxZoom: 19,
-//     attribution: '&copy; OpenStreetMap contributors'
-//     }).addTo(map),
-//   "Satélite": L.tileLayer('https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{x}/{y}', {
-//     attribution: 'Tiles © Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
-//      maxZoom: 19
-//     }).addTo(map),
-// };
+
+ const baseMaps = {
+   "Mapa Clásico": mapaClasico,
+   "Satélite": mapaSatelital,
+ };
 
 // Estilo para rutas
 const estiloRutas = {
@@ -37,10 +37,6 @@ const iconoPOI = L.icon({
   iconAnchor: [16, 32],
   popupAnchor: [0, -32]
 });
-
-
-
-
 
 // Capa rutas
 const rutasLayer = L.geoJSON(null, {
@@ -63,8 +59,14 @@ const poisLayer = L.geoJSON(null, {
   }
 }).addTo(map);
 
+
 const colores = ['#e6194B', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6'];
 
+
+
+
+//Loop para leer los registros de rutas GeoJSon y agregarlas al layer de rutas del mapa
+/*
 async function cargarRutasGeoJSON() {
   const indexPath = './data/rutas/geojson/index.json';
   const rutasGroup = L.featureGroup();
@@ -108,9 +110,62 @@ async function cargarRutasGeoJSON() {
     console.error('No se pudo cargar el index.json', err);
   }
 }
+*/
 
+//Refactor con Carl Sagan
+async function cargarRutasGeoJSON() {
+  const indexPath = './data/rutas/geojson/index.json';
+  const rutasGroup = L.featureGroup();
+
+  const fetchJSON = (path) =>
+    fetch(path).then(res => {
+      if (!res.ok) throw new Error(`Error al cargar ${path}`);
+      return res.json();
+    });
+
+  const getRutaStyle = (i) => ({
+    color: colores[i % colores.length],
+    weight: 4,
+    opacity: 0.9,
+  });
+
+  try {
+    const archivos = await fetchJSON(indexPath);
+    if (!Array.isArray(archivos)) {
+      console.error('index.json no contiene un array válido');
+      return;
+    }
+
+    for (let i = 0; i < archivos.length; i++) {
+      const ruta = `./data/rutas/geojson/${archivos[i]}`;
+      try {
+        const geojson = await fetchJSON(ruta);
+
+        L.geoJSON(geojson, {
+          style: getRutaStyle(i),
+          onEachFeature: (feature, layer) => {
+            if (feature.properties?.name) {
+              layer.bindPopup(`<strong>${feature.properties.name}</strong>`);
+            }
+          }
+        }).addTo(rutasGroup);
+      } catch (err) {
+        console.error(`Error cargando ${ruta}`, err);
+      }
+    }
+
+    rutasGroup.addTo(map);
+
+    if (rutasGroup.getLayers().length > 0) {
+      map.fitBounds(rutasGroup.getBounds());
+    }
+  } catch (err) {
+    console.error('No se pudo cargar el index.json', err);
+  }
+}
+
+//Llamado al map.
 cargarRutasGeoJSON();
-
 
 
 /** PUNTOS DE INTERÉS ---  V2 --- */
@@ -120,23 +175,14 @@ fetch('./data/lugares/geojson/pois.geojson')
   .then(data => poisLayer.addData(data));
 
 
-
-
-// Control de capas
+// Control de capas - UI del mapa (TODO)
 const overlays = {
   "Rutas": rutasLayer,
   "Puntos de Interés": poisLayer
 };
 L.control.layers(null, overlays).addTo(map);
 
-
-
 L.control.layers(baseMaps).addTo(map);
-
-
-
-//Centrar en dibujos.
-//map.fitBounds(geojsonLayer.getBounds());
 
 
 /**
