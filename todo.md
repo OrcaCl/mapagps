@@ -2,6 +2,8 @@
 
 ## 🧪 Spikes
 - [x] Conversión GPX/KML a GeoJSON (posible uso de `togeojson` o `gpx2geojson`)
+- [x] Flechas de dirección con `leaflet-polylinedecorator`
+- [x] Iconos de inicio y fin en rutas
 - [ ] Clasificación automática de rutas por nombre o carpeta
 - [ ] Integración de rutas con capas de Leaflet
 - [ ] UI para cambiar estilo/color/visible desde frontend
@@ -12,12 +14,15 @@
 - [ ] Limpieza de propiedades
 - [ ] Agregar propiedades por defecto
 - [ ] Simplificación de geometrías
+- [ ] Script para convertir **CSV (PlusCodes)** a `pois.geojson`
 
 ## 🔜 Por hacer
 - Mostrar dinámicamente los archivos en el mapa con Leaflet
-- Agregar puntos de interés (POIs) fijos
+- Agregar puntos de interés (POIs) fijos desde `pois.geojson`
 - UI para activar/desactivar rutas por empresa/tipo
 - Documentar formato de los nombres de archivo GPX
+- Evaluar separar la visualización de detalles de cada sendero/POI en una función aparte:
+  - Decidir si los detalles extra van en el GeoJSON o en un archivo externo (categoría bici, dificultad, link, etc.)
 
 # TODO - Próximos pasos para el mapa interactivo
 
@@ -46,11 +51,6 @@
 
 ---
 
-Este plan permitirá mejorar la experiencia del mapa, facilitar la gestión y lograr integración con Wix.
-
----
-
-
 # TODO - Integración de Plus Codes para POIs
 
 - Centralizar los POIs en un archivo JSON con campos:
@@ -73,11 +73,5 @@ Este plan permitirá mejorar la experiencia del mapa, facilitar la gestión y lo
 
 ---
 
-Esta tarea permitirá que las ubicaciones definidas con Plus Codes desde Wix se integren fácilmente al mapa interactivo.
-
----
-
-
-# No olvidar "
-- hacer git tag v0.x.x -m "Mensaje" cuando haga cambios radicales
-
+# No olvidar
+- hacer `git tag v0.x.x -m "Mensaje"` cuando haga cambios radicales

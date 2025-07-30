@@ -3,6 +3,14 @@
 
 ### Avances del Proyecto ###
 
+## 30/07/2025 ##
+
+- Implementadas **flechas de dirección** en rutas usando `leaflet-polylinedecorator`.  
+- Añadidos **iconos de inicio y fin** en cada ruta.  
+- Corregido error del `id` del mapa en el `index.html` (ya se muestra correctamente).  
+- Reorganizados los datos fuente en `data-source/` (GPX y CSV de POI).  
+- Pendiente: probar variables `.env` para estilos y armar script de **CSV → GeoJSON**.
+
 ## 21/07/2025
 - Empezar migración de carpetas, scripts y todo al entorno de Vite
 - Habilitar gitignore que lo tenía mal configurado :S
@@ -42,3 +50,14 @@
 ## Inicio: 17/7/2025
 
 - Estructura base y organización de la mente sobre cómo iba a estructurar este proyecto.
+
+
+## 🧪 Tecnologías
+
+- [Leaflet](https://leafletjs.com/)
+- [Vite](https://vitejs.dev/)
+- [leaflet-polylinedecorator](https://github.com/bbecquet/Leaflet.PolylineDecorator)
+
+---
+
+> 🔖 Nota: Revisar el archivo [TODO.md](./TODO.md) para el backlog completo y tareas futuras.

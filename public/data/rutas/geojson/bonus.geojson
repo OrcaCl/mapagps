@@ -7,6 +7,7 @@
         "_gpxType": "trk",
         "name": "Bonus ",
         "type": "cycling",
+        "bikeCat": "Downhill",
         "coordinateProperties": {}
       },
       "geometry": {
